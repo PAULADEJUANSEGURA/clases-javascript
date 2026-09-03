@@ -1,4 +1,4 @@
-### Clases de JavaScript
+# Clases de JavaScript
 
 ## Clase 1: Estructuras de datos 1 
 ## Arrays y Métodos de los Arrays en JavaScript
