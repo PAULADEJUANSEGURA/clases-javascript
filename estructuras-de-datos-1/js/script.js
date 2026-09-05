@@ -100,7 +100,7 @@ console.log(tareas);
 tareas.push("Leer", "Programar", "Escribir")
 console.log(tareas)
 
-// pop() -> Elimina el último elmento y lo retorna, lo devuelve.
+// pop() -> Elimina el último elemento y lo retorna, lo devuelve.
 const tareaEliminada = tareas.pop();
 console.log(tareas);
 console.log(tareaEliminada);
@@ -170,10 +170,31 @@ console.log(meses);
 
 const mesesInvierno = meses.slice(0, 2);
 console.log(mesesInvierno);
+
+/* Esto no es necesario porque quita el último elemento del array original de meses y no queremos modificarlo
+
 const ultimoMes = meses.pop()
-console.log(ultimoMes)
+console.log(ultimoMes) 
+
+Además de modificar el array original meses y dejarlo solamente hasta Noviembre y quitar Diciembre... 
+Realmente no usamos ultimoMes a la hora de hacer el unshift("Diciembre")
+*/
+
 mesesInvierno.unshift("Diciembre");
 console.log(mesesInvierno);
+console.log(meses);
 
-
-
+/* 
+También podría usar slice para crear otra copia a la vez que porción del array original sin modificarlo y sacar solamente el ultimoMes? "Diciembre"
+Su sintaxis es: array.slice(inicio del rango, fin del rango)
+Para coger Diciembre tengo que decirle el rango del 11 al 12
+const ultimoMes = meses.slice(11, 12);
+console.log(ultimoMes);
+const mesesInvierno2 = meses.slice(0, 2);
+console.log(mesesInvierno2);
+Al hacer unshift de ultimoMes en realidad introduzco un array de 1 elemento
+mesesInvierno2.unshift(ultimoMes);
+console.log(mesesInvierno2);
+Esta opción no es adecuada
+Es mejor la versión previa de mesesInvierno.unshift("Diciembre");
+*/
